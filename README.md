@@ -1,6 +1,6 @@
 # PELICAN
 
-![pelican](https://raw.githubusercontent.com/oda-alexandre/pelican/master/logo-pelican.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/pelican/master/logo-docker.png)
+![pelican](https://raw.githubusercontent.com/oda-alexandre/pelican/master/img/logo-pelican.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/pelican/master/img/logo-docker.png)
 
 
 ## INDEX
