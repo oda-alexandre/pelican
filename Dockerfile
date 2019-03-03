@@ -3,7 +3,7 @@ FROM python:2
 MAINTAINER https://oda-alexandre.com
 
 # VARIABLES
-ENV USER android
+ENV USER pelican
 ENV DEBIAN_FRONTEND noninteractive
 
 # AJOUT UTILISATEUR
@@ -19,7 +19,7 @@ chmod 775 /srv/pelican && \
 chown www-data:pelican /srv/pelican && \
 
 # AJOUT DE L'UTILISATEUR AU GROUPE PELICAN
-usermod -a -G ${USER} pelican
+usermod -a -G pelican ${USER}
 
 # SELECTION ESPACE DE TRAVAIL
 WORKDIR /srv/pelican
