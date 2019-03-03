@@ -19,7 +19,7 @@ chmod 775 /srv/pelican && \
 chown www-data:pelican /srv/pelican && \
 
 # AJOUT DE L'UTILISATEUR AU GROUPE PELICAN
-usermod -a -G pelican ${USER}
+usermod -a -G ${USER} pelican
 
 # SELECTION ESPACE DE TRAVAIL
 WORKDIR /srv/pelican
