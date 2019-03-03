@@ -1,25 +1,33 @@
 # PELICAN
 
-![pelican](https://raw.githubusercontent.com/oda-alexandre/pelican/master/img/logo-pelican.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/pelican/master/img/logo-docker.png)
+[![dockeri.co](https://dockeri.co/image/alexandreoda/atom)](https://hub.docker.com/r/alexandreoda/atom)
 
 
 ## INDEX
 
-- [Build Docker](#BUILD)
+- [Badges](#BADGES)
 - [Introduction](#INTRODUCTION)
 - [Prerequis](#PREREQUIS)
 - [Installation](#INSTALLATION)
+- [Utilisation](#UTILISATION)
 - [License](#LICENSE)
 
 
-## BUILD DOCKER
+## BADGES
 
-[![pelican docker build](https://img.shields.io/docker/build/alexandreoda/pelican.svg)](https://hub.docker.com/r/alexandreoda/pelican)
+[![version](https://images.microbadger.com/badges/version/alexandreoda/atom.svg)](https://microbadger.com/images/alexandreoda/atom)
+[![size](https://images.microbadger.com/badges/image/alexandreoda/atom.svg)](https://microbadger.com/images/alexandreoda/atom")
+[![build](https://img.shields.io/docker/build/alexandreoda/atom.svg)](https://hub.docker.com/r/alexandreoda/atom)
+[![automated](https://img.shields.io/docker/automated/alexandreoda/atom.svg)](https://hub.docker.com/r/alexandreoda/atom)
 
 
 ## INTRODUCTION
 
-Ce repository contient le fichier Dockerfile de [Pelican](https://pelican.io/) pour [docker](https://www.docker.com), mis à jour automatiquement dans le [docker hub](https://hub.docker.com/r/alexandreoda/pelican/) public.
+Ce repository contient le fichier Dockerfile de
+
+- [Pelican](https://pelican.io/)
+
+Mis à jour automatiquement dans le [docker hub public](https://hub.docker.com/r/alexandreoda/pelican).
 
 
 ## PREREQUIS
@@ -34,6 +42,9 @@ Placez vous dans le dossier de votre site puis copier/coller dans un terminal
 ```
 docker run -it --name pelican -p 127.0.0.1:8000:8000 -v $(pwd):/srv/pelican alexandreoda/pelican
 ```
+
+
+## UTILISATION
 
 Pour creer un nouveau site
 
