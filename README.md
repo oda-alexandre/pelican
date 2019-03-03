@@ -1,6 +1,6 @@
 # PELICAN
 
-[![dockeri.co](https://dockeri.co/image/alexandreoda/atom)](https://hub.docker.com/r/alexandreoda/atom)
+[![dockeri.co](https://dockeri.co/image/alexandreoda/pelican)](https://hub.docker.com/r/alexandreoda/pelican)
 
 
 ## INDEX
@@ -15,10 +15,10 @@
 
 ## BADGES
 
-[![version](https://images.microbadger.com/badges/version/alexandreoda/atom.svg)](https://microbadger.com/images/alexandreoda/atom)
-[![size](https://images.microbadger.com/badges/image/alexandreoda/atom.svg)](https://microbadger.com/images/alexandreoda/atom")
-[![build](https://img.shields.io/docker/build/alexandreoda/atom.svg)](https://hub.docker.com/r/alexandreoda/atom)
-[![automated](https://img.shields.io/docker/automated/alexandreoda/atom.svg)](https://hub.docker.com/r/alexandreoda/atom)
+[![version](https://images.microbadger.com/badges/version/alexandreoda/pelican.svg)](https://microbadger.com/images/alexandreoda/pelican)
+[![size](https://images.microbadger.com/badges/image/alexandreoda/pelican.svg)](https://microbadger.com/images/alexandreoda/pelican")
+[![build](https://img.shields.io/docker/build/alexandreoda/pelican.svg)](https://hub.docker.com/r/alexandreoda/pelican)
+[![automated](https://img.shields.io/docker/automated/alexandreoda/pelican.svg)](https://hub.docker.com/r/alexandreoda/pelican)
 
 
 ## INTRODUCTION
