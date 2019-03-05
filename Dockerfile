@@ -3,8 +3,9 @@ FROM python:2
 MAINTAINER https://oda-alexandre.com
 
 # VARIABLES
-ENV USER pelican \
-DEBIAN_FRONTEND noninteractive
+ENV USER pelican
+ENV PORTS 8000
+ENV DEBIAN_FRONTEND noninteractive
 
 # AJOUT UTILISATEUR
 RUN useradd -d /home/${USER} -m ${USER} && \
@@ -29,6 +30,9 @@ RUN pip install markdown pelican
 
 # SELECTION UTILISATEUR
 USER ${USER}
+
+# OUVERTURE DE PORTS
+EXPOSE ${PORTS}
 
 # COMMANDE AU DEMARRAGE DU CONTENEUR
 CMD /bin/bash
