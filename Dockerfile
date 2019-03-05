@@ -3,8 +3,8 @@ FROM python:2
 MAINTAINER https://oda-alexandre.com
 
 # VARIABLES
-ENV USER pelican
-ENV DEBIAN_FRONTEND noninteractive
+ENV USER pelican \
+DEBIAN_FRONTEND noninteractive
 
 # AJOUT UTILISATEUR
 RUN useradd -d /home/${USER} -m ${USER} && \
