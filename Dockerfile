@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # INSTALLATION DES PREREQUIS
 RUN apt-get update && apt-get install -y --no-install-recommends \
-sudo \
+sudo && \
 
 # AJOUT UTILISATEUR
 useradd -d /home/${USER} -m ${USER} && \
