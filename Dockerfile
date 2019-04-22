@@ -7,8 +7,12 @@ ENV USER pelican
 ENV PORTS 8000
 ENV DEBIAN_FRONTEND noninteractive
 
+# INSTALLATION DES PREREQUIS
+RUN apt-get update && apt-get install -y --no-install-recommends \
+sudo \
+
 # AJOUT UTILISATEUR
-RUN useradd -d /home/${USER} -m ${USER} && \
+useradd -d /home/${USER} -m ${USER} && \
 passwd -d ${USER} && \
 adduser ${USER} sudo  && \
 
@@ -26,6 +30,7 @@ usermod -a -G pelican ${USER}
 WORKDIR /srv/pelican
 
 # INSTALLATION DES PREREQUIS python
+
 RUN pip install markdown pelican
 
 # SELECTION UTILISATEUR
