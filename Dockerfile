@@ -1,6 +1,6 @@
 FROM python:2
 
-MAINTAINER http://www.oda-alexandre.com/
+MAINTAINER https://www.oda-alexandre.com/
 
 # VARIABLES
 ENV USER pelican
