@@ -1,6 +1,6 @@
 # PELICAN
 
-[![dockeri.co](https://dockeri.co/image/alexandreoda/pelican)](https://hub.docker.com/r/alexandreoda/pelican)
+<img src="https://www.alexjf.net/blog/site/website-ported-to-pelican/images/thumbnails/_x360/logo.png" />
 
 
 ## INDEX
@@ -15,10 +15,7 @@
 
 ## BADGES
 
-[![version](https://images.microbadger.com/badges/version/alexandreoda/pelican.svg)](https://microbadger.com/images/alexandreoda/pelican)
-[![size](https://images.microbadger.com/badges/image/alexandreoda/pelican.svg)](https://microbadger.com/images/alexandreoda/pelican")
-[![build](https://img.shields.io/docker/build/alexandreoda/pelican.svg)](https://hub.docker.com/r/alexandreoda/pelican)
-[![automated](https://img.shields.io/docker/automated/alexandreoda/pelican.svg)](https://hub.docker.com/r/alexandreoda/pelican)
+[![pipeline status](https://gitlab.com/oda-alexandre/pelican/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/pelican/commits/master)
 
 
 ## INTRODUCTION
