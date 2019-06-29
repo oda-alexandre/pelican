@@ -7,9 +7,9 @@
 
 - [Badges](#BADGES)
 - [Introduction](#INTRODUCTION)
-- [Prerequis](#PREREQUIS)
-- [Installation](#INSTALLATION)
-- [Utilisation](#UTILISATION)
+- [Prerequisites](#PREREQUISITESITES)
+- [Install](#INSTALL)
+- [Use](#USE)
 - [License](#LICENSE)
 
 
@@ -20,50 +20,56 @@
 
 ## INTRODUCTION
 
-Ce repository contient le fichier Dockerfile de
+Docker image of :
 
 - [Pelican](https://pelican.io/)
 
-Mis à jour automatiquement dans le [docker hub public](https://hub.docker.com/r/alexandreoda/pelican).
+Continuous integration on :
+
+- [gitlab](https://gitlab.com/oda-alexandre/pelican/pipelines)
+
+Automatically updated on :
+
+- [docker hub public](https://hub.docker.com/r/alexandreoda/pelican).
 
 
-## PREREQUIS
+## PREREQUISITES
 
-Installer [docker](https://www.docker.com)
+Use [docker](https://www.docker.com)
 
 
-## INSTALLATION
+## INSTALL
 
-Placez vous dans le dossier de votre site puis copier/coller dans un terminal
+put in the folder of your site
 
 ```
 docker run -it --name pelican -p 127.0.0.1:8000:8000 -v $(pwd):/srv/pelican alexandreoda/pelican
 ```
 
 
-## UTILISATION
+## USE
 
-Pour creer un nouveau site
+To create a new site
 
 ```
 pelican-quickstart
 ```
 
-Pour reprendre un site
+To resume a site
 
 ```
 ./develop_server.sh restart 8000
 ```
 
-Si vous utilisez Makefile utilisez
+If you use Makefile
 
 ```
 make devserver
 ```
 
-Lien vers votre site en developement http://127.0.0.1:8000/
+Link to your site in developement http://127.0.0.1:8000/
 
 
 **LICENSE**
 
-[![GPLv3+](http://gplv3.fsf.org/gplv3-127x51.png)](https://github.com/oda-alexandre/pelican/blob/master/LICENSE)
+[![GPLv3+](http://gplv3.fsf.org/gplv3-127x51.png)](https://gitlab.com/oda-alexandre/pelican/blob/master/LICENSE)
