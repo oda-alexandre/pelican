@@ -1,6 +1,6 @@
 # PELICAN
 
-<img src="https://www.alexjf.net/blog/site/website-ported-to-pelican/images/thumbnails/_x360/logo.png" />
+<img src="https://www.alexjf.net/blog/site/website-ported-to-pelican/images/thumbnails/_x360/logo.png" width="200" height="200"/>
 
 
 ## INDEX
