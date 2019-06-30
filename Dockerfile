@@ -1,45 +1,39 @@
-# IMAGE TO USE
 FROM python:2
 
-# MAINTAINER
 MAINTAINER https://www.oda-alexandre.com/
 
-# VARIABLES
 ENV USER pelican
 ENV PORTS 8000
 ENV DEBIAN_FRONTEND noninteractive
 
-# INSTALL PACKAGES
-RUN apt-get update && apt-get install -y --no-install-recommends \
-sudo && \
+RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
+apt-get update && apt-get install -y --no-install-recommends \
+sudo
 
-# ADD USER
+RUN echo -e '\033[36;1m ******* INSTALL PACKAGES PYTHON ******** \033[0m' && \
+pip install \
+markdown \
+pelican
+
+RUN echo -e '\033[36;1m ******* ADD USER & ADD USER TO THE GROUP PELICAN******** \033[0m' && \
 useradd -d /home/${USER} -m ${USER} && \
 passwd -d ${USER} && \
 adduser ${USER} sudo  && \
-
-# CREATION ESPACE OF TRAVAIL
-mkdir /srv/pelican && \
-
-# SECURISE WORKING SPACE
-chmod 775 /srv/pelican && \
-chown www-data:pelican /srv/pelican && \
-
-# ADD OF USER TO THE GROUP PELICAN
 usermod -a -G pelican ${USER}
 
-# SELECT WORKING SPACE
+RUN echo -e '\033[36;1m ******* CREATE & SECURISE WORKING SPACE ******** \033[0m' && \
+mkdir /srv/pelican && \
+chmod 775 /srv/pelican && \
+chown www-data:pelican /srv/pelican
+
+RUN echo -e '\033[36;1m ******* SELECT WORKING SPACE ******** \033[0m'
 WORKDIR /srv/pelican
 
-# INSTALL PACKAGES python
-
-RUN pip install markdown pelican
-
-# SELECT USER
+RUN echo -e '\033[36;1m ******* SELECT USER ******** \033[0m'
 USER ${USER}
 
-# OPENING PORTS
+RUN echo -e '\033[36;1m ******* OPENING PORTS ******** \033[0m'
 EXPOSE ${PORTS}
 
-# START THE CONTAINER
+RUN echo -e '\033[36;1m ******* CONTAINER START COMMAND ******** \033[0m'
 CMD /bin/bash \
