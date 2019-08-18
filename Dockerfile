@@ -1,6 +1,6 @@
 FROM python:2
 
-LABEL authors="https://www.oda-alexandre.com/"
+LABEL authors https://www.oda-alexandre.com/
 
 ENV USER pelican
 ENV PORTS 8000
