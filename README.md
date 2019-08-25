@@ -2,7 +2,6 @@
 
 <img src="https://www.alexjf.net/blog/site/website-ported-to-pelican/images/thumbnails/_x360/logo.png" width="200" height="200"/>
 
-
 ## INDEX
 
 - [Badges](#BADGES)
@@ -12,11 +11,9 @@
 - [Use](#USE)
 - [License](#LICENSE)
 
-
 ## BADGES
 
 [![pipeline status](https://gitlab.com/oda-alexandre/pelican/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/pelican/commits/master)
-
 
 ## INTRODUCTION
 
@@ -32,44 +29,32 @@ Automatically updated on :
 
 - [docker hub public](https://hub.docker.com/r/alexandreoda/pelican).
 
-
 ## PREREQUISITES
 
 Use [docker](https://www.docker.com)
-
 
 ## INSTALL
 
 put in the folder of your site
 
-```
-docker run -it --name pelican -p 127.0.0.1:8000:8000 -v $(pwd):/srv/pelican alexandreoda/pelican
-```
-
+```docker run -it --name pelican -p 127.0.0.1:8000:8000 -v $(pwd):/srv/pelican alexandreoda/pelican```
 
 ## USE
 
 To create a new site
 
-```
-pelican-quickstart
-```
+```pelican-quickstart```
 
 To resume a site
 
-```
-./develop_server.sh restart 8000
-```
+```./develop_server.sh restart 8000```
 
 If you use Makefile
 
-```
-make devserver
-```
+```make devserver```
 
-Link to your site in developement http://127.0.0.1:8000/
+Link to your site in developement <http://127.0.0.1:8000/>
 
-
-**LICENSE**
+## LICENSE
 
 [![GPLv3+](http://gplv3.fsf.org/gplv3-127x51.png)](https://gitlab.com/oda-alexandre/pelican/blob/master/LICENSE)
