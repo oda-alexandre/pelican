@@ -3,20 +3,26 @@ FROM python:2
 LABEL authors https://www.oda-alexandre.com/
 
 ENV USER pelican
+ENV HOME /home/${USER}
+ENV LOCALES fr_FR.UTF-8
 ENV PORTS 8000
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m'; \
-  apt update && apt install -y --no-install-recommends \
+  apt-get update && apt-get install -y --no-install-recommends \
+  locales \
   sudo
 
+RUN echo -e '\033[36;1m ******* CHANGE LOCALES ******** \033[0m'; \
+  locale-gen ${LOCALES}
+  
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES PYTHON ******** \033[0m'; \
   pip install \
   markdown \
   pelican
 
 RUN echo -e '\033[36;1m ******* ADD USER & ADD USER TO THE GROUP PELICAN******** \033[0m'; \
-  useradd -d /home/${USER} -m ${USER}; \
+  useradd -d ${HOME} -m ${USER}; \
   passwd -d ${USER}; \
   adduser ${USER} sudo ; \
   usermod -a -G pelican ${USER}
