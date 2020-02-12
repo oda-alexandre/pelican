@@ -1,6 +1,7 @@
 # PELICAN
 
-<img src="https://www.alexjf.net/blog/site/website-ported-to-pelican/images/thumbnails/_x360/logo.png" width="200" height="200"/>
+<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904464/16d3e5679900925928d7a587bc49fdc8_resize.jpg" width="200" height="200"/>
+
 
 ## INDEX
 
@@ -12,9 +13,11 @@
   - [INSTALL](#install)
   - [LICENSE](#license)
 
+
 ## BADGES
 
 [![pipeline status](https://gitlab.com/oda-alexandre/pelican/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/pelican/commits/master)
+
 
 ## INTRODUCTION
 
@@ -30,15 +33,18 @@ Automatically updated on :
 
 - [docker hub public](https://hub.docker.com/r/alexandreoda/pelican).
 
+
 ## PREREQUISITES
 
 Use [docker](https://www.docker.com)
+
 
 ## INSTALL
 
 put in the folder of your site
 
 ```docker run -it --name pelican -p 127.0.0.1:8000:8000 -v $(pwd):/srv/pelican --restart always alexandreoda/pelican```
+
 
 ## USE
 
@@ -55,6 +61,7 @@ If you use Makefile
 ```make devserver```
 
 Link to your site in developement <http://127.0.0.1:8000/>
+
 
 ## LICENSE
 
