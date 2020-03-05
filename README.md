@@ -43,7 +43,8 @@ Use [docker](https://www.docker.com)
 
 put in the folder of your site
 
-```docker run -it --name pelican -p 127.0.0.1:8000:8000 -v $(pwd):/srv/pelican --restart unless-stopped alexandreoda/pelican
+```\
+docker  run -it --name pelican -p 127.0.0.1:8000:8000 -v $(pwd):/srv/pelican --restart unless-stopped alexandreoda/pelican
 ```
 
 ### DOCKER COMPOSE
