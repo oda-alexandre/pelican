@@ -10,6 +10,9 @@
   - [INTRODUCTION](#introduction)
   - [PREREQUISITES](#prerequisites)
   - [INSTALL](#install)
+    - [DOCKER RUN](#docker-run)
+    - [DOCKER COMPOSE](#docker-compose)
+  - [USE](#use)
   - [LICENSE](#license)
 
 ## BADGES
@@ -24,7 +27,7 @@ Docker image of :
 
 Continuous integration on :
 
-- [gitlab](https://gitlab.com/oda-alexandre/pelican/pipelines)
+- [gitlab pipelines](https://gitlab.com/oda-alexandre/pelican/pipelines)
 
 Automatically updated on :
 
@@ -36,23 +39,47 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
+### DOCKER RUN
+
 put in the folder of your site
 
-```docker run -it --name pelican -p 127.0.0.1:8000:8000 -v $(pwd):/srv/pelican --restart always alexandreoda/pelican```
+```docker run -it --name pelican -p 127.0.0.1:8000:8000 -v $(pwd):/srv/pelican --restart unless-stopped alexandreoda/pelican
+```
+
+### DOCKER COMPOSE
+
+```yml
+version: "3.7"
+
+services:
+  pelican:
+    container_name: pelican
+    image: alexandreoda/pelican
+    restart: unless-stopped
+    privileged: true
+    volumes:
+      - "${HOME}:/home/pelican"
+      - "$(pwd):/srv/pelican"
+    ports:
+      - "8000"
+```
 
 ## USE
 
 To create a new site
 
-```pelican-quickstart```
+```pelican-quickstart
+```
 
 To resume a site
 
-```./develop_server.sh restart 8000```
+```./develop_server.sh restart 8000
+```
 
 If you use Makefile
 
-```make devserver```
+```make devserver
+```
 
 Link to your site in developement <http://127.0.0.1:8000/>
 
