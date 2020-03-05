@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  pelican:
+    container_name: pelican
+    image: alexandreoda/pelican
+    restart: unless-stopped
+    privileged: true
+    volumes:
+      - "${HOME}:/home/pelican"
+      - "$(pwd):/srv/pelican"
+    ports:
+      - "8000"
