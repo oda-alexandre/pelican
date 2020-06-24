@@ -2,8 +2,6 @@
 
 ![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904464/16d3e5679900925928d7a587bc49fdc8_resize.jpg)
 
-## INDEX
-
 - [PELICAN](#pelican)
   - [INDEX](#index)
   - [BADGES](#badges)
@@ -37,7 +35,7 @@ Automatically updated on :
 
 Use [docker](https://www.docker.com)
 
-## INSTALL
+## BUILD
 
 ### DOCKER RUN
 
